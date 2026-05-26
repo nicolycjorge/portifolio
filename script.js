@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const WHATSAPP_NUMBER = '5519988822112';
+    const WHATSAPP_NUMBER = '5519971317811';
 
     const contactForm = document.getElementById('contact-form');
     function attachWhatsAppHandler() {
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const text = `${message}`;
 
             if (!WHATSAPP_NUMBER || WHATSAPP_NUMBER === 'WHATSAPP_NUMBER') {
-                alert('Por favor, configure seu número de WhatsApp no arquivo script.js (variável WHATSAPP_NUMBER).');
                 return;
             }
 
