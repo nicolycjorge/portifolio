@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio da Nicoly | Arquitetura e Design de Interiores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">Nicoly</div>
+        <nav class="nav-links">
+            <a href="#inicio" class="nav-item">Início</a>
+            <a href="#portfolio" class="nav-item">Projetos</a>
+            <a href="#sobre" class="nav-item">Sobre</a>
+            <a href="#contato" class="nav-item">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Espaços que narram histórias, formas que acolhem vidas</h1>
+            <p class="hero-subtitle">Arquitetura e Design de Interiores com sensibilidade e sofisticação</p>
+            <a href="#portfolio" class="hero-btn">Explorar Projetos</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="section-title">Portfólio Selecionado</h2>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="arquitetura">Arquitetura</button>
+            <button class="filter-btn" data-filter="interiores">Design de Interiores</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item card-hidden" data-category="arquitetura">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                        alt="Residência Linhas Fluídas">
+                    <div class="overlay">
+                        <span class="view-project">Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Residência Linhas Fluídas</h3>
+                    <p>Um projeto residencial focado na integração da iluminação natural com o minimalismo estrutural.
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-item card-hidden" data-category="interiores">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80"
+                        alt="Apartamento Quartzo Rose">
+                    <div class="overlay">
+                        <span class="view-project">Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Apartamento Quartzo Rose</h3>
+                    <p>Design de interiores onde tons pastéis e texturas aveludadas criam uma atmosfera de acolhimento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-item card-hidden" data-category="arquitetura">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+                        alt="Pavilhão de Vidro e Ouro">
+                    <div class="overlay">
+                        <span class="view-project">Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Pavilhão Cúpula Dourada</h3>
+                    <p>Estrutura contemporânea que brinca com reflexos metálicos e grandes vãos livres industriais.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item card-hidden" data-category="interiores">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+                        alt="Living Conforto Moderno">
+                    <div class="overlay">
+                        <span class="view-project">Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Living Conforto Moderno</h3>
+                    <p>Sala de estar integrada desenvolvida com mobiliário assinado e detalhes em filetes dourados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="section-title-left">Nicoly</h2>
+                <p class="about-description">Graduada em Arquitetura e Urbanismo e especialista em Design de Interiores,
+                    compreendo o espaço como uma tela onde a funcionalidade encontra a poesia visual. Minha assinatura
+                    combina a sobriedade das estruturas modernas com a delicadeza de detalhes que transformam o
+                    cotidiano em uma experiência estética contínua.</p>
+                <div class="resume-timeline">
+                    <div class="timeline-entry">
+                        <span class="year">2024 — Presente</span>
+                        <h4>Desenvolvimento de Projetos Autorais</h4>
+                        <p>Atuação independente com foco em reformas residenciais de alto padrão e consultorias de
+                            interiores.</p>
+                    </div>
+                    <div class="timeline-entry">
+                        <span class="year">2022 — 2024</span>
+                        <h4>Colaboração em Escritórios de Estética Fina</h4>
+                        <p>Desenvolvimento de detalhamento executivo, paginação de pisos e escolha de paletas cromáticas
+                            corporativas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                    alt="Retrato da Profissional">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <h2 class="section-title">Vamos planejar o seu espaço?</h2>
+        <p class="contact-subtitle">Entre em contato para orçamentos, parcerias ou para tomar um café.</p>
+        <form class="contact-form" id="contact-form">
+            <textarea id="contact-message" name="message" placeholder="Fale um pouco sobre o seu projeto ou sonho"
+                rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Portfólio da Nicoly. Todos os direitos reservados. Elegância em cada detalhe.</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
