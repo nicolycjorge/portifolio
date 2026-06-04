@@ -449,6 +449,63 @@ section {
     object-fit: cover;
 }
 
+/* ---------- GitHub Pages visual fallback ---------- */
+/* Fixes for environments that don't support backdrop-filter or render transparencies oddly */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .hero-content,
+    .main-header {
+        background-color: rgba(255,255,255,0.96) !important;
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important;
+    }
+    .about-section {
+        background-color: #fff !important;
+    }
+}
+
+/* Make the responsive grid and images more robust on Pages */
+.portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+    gap: 2rem;
+}
+
+.image-wrapper {
+    height: auto !important;
+}
+.image-wrapper img {
+    height: auto !important;
+    max-height: 420px;
+    width: 100%;
+}
+
+.hero-section {
+    min-height: 70vh;
+}
+
+/* Tamer shadows for better contrast */
+.portfolio-item, .hero-content, .about-image-wrapper, .lightbox-content {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04) !important;
+}
+
+/* Ensure header remains fixed and visible */
+.main-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Reduce hero decorative noise on Pages */
+.hero-decor {
+    opacity: 0.6 !important;
+}
+
+/* If you want a stricter fallback, uncomment to hide blobs entirely */
+/* .hero-decor { display: none !important; } */
+
+/* End fallback */
+
 .contact-section {
     max-width: 700px;
     margin: 0 auto;
