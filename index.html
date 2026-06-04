@@ -11,14 +11,36 @@
 <body>
 
     <header class="main-header">
-        <div class="logo">Nicoly</div>
+        <span class="sr-only">Nicoly</span>
         <nav class="nav-links">
-            <a href="#inicio" class="nav-item">Início</a>
-            <a href="#portfolio" class="nav-item">Projetos</a>
-            <a href="#sobre" class="nav-item">Sobre</a>
-            <a href="#contato" class="nav-item">Contato</a>
+            <a href="#inicio" class="nav-item" aria-label="Início">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z"></path>
+                </svg>
+                <span class="sr-only">Início</span>
+            </a>
+            <a href="#portfolio" class="nav-item" aria-label="Projetos">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zM13 21h8v-10h-8v10zm0-18v6h8V3h-8z"></path>
+                </svg>
+                <span class="sr-only">Projetos</span>
+            </a>
+            <a href="#sobre" class="nav-item" aria-label="Sobre">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"></path>
+                </svg>
+                <span class="sr-only">Sobre</span>
+            </a>
+            <a href="#contato" class="nav-item" aria-label="Contato">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M21 8V7l-3 2-2-1-8 5 1 2 8-5 2 1 3-2zM4 6h12v2H4zM4 10h8v2H4z"></path>
+                </svg>
+                <span class="sr-only">Contato</span>
+            </a>
         </nav>
     </header>
+
+    <!-- social-bar removida: ícones aplicados ao menu superior -->
 
     <section id="inicio" class="hero-section">
         <div class="hero-content">
@@ -26,6 +48,14 @@
             <p class="hero-subtitle">Arquitetura e Design de Interiores com sensibilidade e sofisticação</p>
             <a href="#portfolio" class="hero-btn">Explorar Projetos</a>
         </div>
+
+        <div class="hero-decor" aria-hidden="true">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <!-- scroll-indicator removido conforme solicitado -->
     </section>
 
     <section id="portfolio" class="portfolio-section">
