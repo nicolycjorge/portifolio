@@ -452,13 +452,15 @@ section {
 /* ---------- GitHub Pages visual fallback ---------- */
 /* Fixes for environments that don't support backdrop-filter or render transparencies oddly */
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+
     .hero-content,
     .main-header {
-        background-color: rgba(255,255,255,0.96) !important;
+        background-color: rgba(255, 255, 255, 0.96) !important;
         -webkit-backdrop-filter: none !important;
         backdrop-filter: none !important;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04) !important;
     }
+
     .about-section {
         background-color: #fff !important;
     }
@@ -473,6 +475,7 @@ section {
 .image-wrapper {
     height: auto !important;
 }
+
 .image-wrapper img {
     height: auto !important;
     max-height: 420px;
@@ -484,8 +487,11 @@ section {
 }
 
 /* Tamer shadows for better contrast */
-.portfolio-item, .hero-content, .about-image-wrapper, .lightbox-content {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04) !important;
+.portfolio-item,
+.hero-content,
+.about-image-wrapper,
+.lightbox-content {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Ensure header remains fixed and visible */
@@ -505,6 +511,62 @@ section {
 /* .hero-decor { display: none !important; } */
 
 /* End fallback */
+
+/* ---------- Strong roundness overrides ---------- */
+:root {
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --soft-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Apply generous radii and softer shadows to key UI elements */
+.main-header,
+.hero-content,
+.portfolio-item,
+.image-wrapper,
+.about-image-wrapper,
+.lightbox-content,
+.nav-item,
+.hero-btn,
+.submit-btn,
+.contact-form input,
+.contact-form textarea {
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--soft-shadow) !important;
+}
+
+.hero-content,
+.about-image-wrapper,
+.lightbox-content {
+    border-radius: var(--radius-lg) !important;
+}
+
+.portfolio-item {
+    border-bottom: none !important;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    border-radius: calc(var(--radius-md) - 2px) !important;
+    overflow: hidden !important;
+}
+
+/* Make nav items pill-shaped */
+.nav-item {
+    border-radius: 999px !important;
+}
+
+/* Slightly larger gaps and softer grid for small screens */
+.portfolio-grid {
+    gap: 2.4rem !important;
+}
+
+/* Reduce harsh borders */
+* {
+    border-radius: inherit;
+}
+
+/* End strong overrides */
 
 .contact-section {
     max-width: 700px;
