@@ -24,15 +24,7 @@
             max-width: 1400px;
         }
 
-        .project-gallery .image-wrapper {
-            background-color: transparent;
-            box-shadow: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            min-height: 520px;
-        }
+
 
         .project-gallery img {
             width: 100%;
@@ -40,16 +32,6 @@
             object-fit: cover;
             border-radius: 18px;
             display: block;
-        }
-
-        .image-caption {
-            padding: 0.9rem 1rem;
-            color: #444;
-            font-size: 0.92rem;
-            line-height: 1.45;
-            border-bottom-left-radius: 18px;
-            border-bottom-right-radius: 18px;
-            margin-top: -6px;
         }
 
         .project-meta {
@@ -219,11 +201,6 @@
                 img.src = src;
                 img.alt = title;
                 wrapper.appendChild(img);
-
-                const caption = document.createElement('div');
-                caption.className = 'image-caption';
-                caption.innerText = title;
-                wrapper.appendChild(caption);
 
                 wrapper.addEventListener('mousemove', (e) => {
                     const rect = wrapper.getBoundingClientRect();
