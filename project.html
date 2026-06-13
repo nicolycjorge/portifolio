@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto — Detalhes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-hero {
+            max-width: 1000px;
+            margin: 36px auto;
+            padding: 20px
+        }
+
+        .project-gallery {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px
+        }
+
+        .project-gallery img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 8px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 12px
+        }
+
+        .project-meta {
+            color: #666;
+            margin-top: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">Voltar</a>
+        </nav>
+    </header>
+
+    <main class="project-hero" id="project-root">
+        <h1 id="project-title">Carregando...</h1>
+        <div id="project-intro" class="project-meta"></div>
+        <p id="project-description"></p>
+
+        <div class="project-gallery" id="project-gallery"></div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Portfólio da Nicoly</p>
+    </footer>
+
+    <script>
+        (function () {
+            function qs(key) {
+                const params = new URLSearchParams(window.location.search);
+                return params.get(key);
+            }
+
+            const projects = {
+                'residencia-linhas-fluidas': {
+                    title: 'Residência Linhas Fluídas',
+                    intro: 'Arquitetura residencial integrando luz natural e minimalismo.',
+                    description: 'Projeto residencial com ênfase em fluxos orgânicos, materiais naturais e soluções de iluminação que ampliam espaços pequenos.',
+                    images: [
+                        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+                        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80'
+                    ]
+                },
+                'apartamento-quartzo-rose': {
+                    title: 'Apartamento Quartzo Rose',
+                    intro: 'Design de interiores em tons pastéis e texturas suaves.',
+                    description: 'Ambiente assinado com paleta aconchegante, móveis sob medida e iluminação cenográfica para destacar pontos de interesse.',
+                    images: [
+                        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80',
+                        'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80'
+                    ]
+
+                },
+                'teste': {
+                    title: 'Teste',
+                    intro: 'Design de interiores em tons pastéis e texturas suaves.',
+                    description: 'Ambiente assinado com paleta aconchegante, móveis sob medida e iluminação cenográfica para destacar pontos de interesse.',
+                    images: [
+                        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80',
+                        'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80'
+                    ]
+                },
+                'pavilhao-cupula-dourada': {
+                    title: 'Pavilhão Cúpula Dourada',
+                    intro: 'Estrutura contemporânea com materiais reflexivos.',
+                    description: 'Pavilhão que explora vãos livres e superfícies metálicas para criar composições luminosas e cenográficas.',
+                    images: [
+                        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+                        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80'
+                    ]
+                },
+                'living-conforto-moderno': {
+                    title: 'Living Conforto Moderno',
+                    intro: 'Sala integrada com mobiliário autoral.',
+                    description: 'Projeto de sala de estar que combina peças contemporâneas, texturas naturais e detalhes metálicos para equilíbrio visual.',
+                    images: [
+                        'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+                        'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80'
+                    ]
+                }
+            };
+
+            const id = qs('id');
+            const container = document.getElementById('project-root');
+            const titleEl = document.getElementById('project-title');
+            const descEl = document.getElementById('project-description');
+            const introEl = document.getElementById('project-intro');
+            const gallery = document.getElementById('project-gallery');
+
+            if (!id || !projects[id]) {
+                titleEl.innerText = 'Projeto não encontrado';
+                descEl.innerText = 'O projeto que você procurou não está disponível. Volte para o portfólio e tente outro.';
+                introEl.innerText = '';
+                return;
+            }
+
+            const p = projects[id];
+            titleEl.innerText = p.title;
+            introEl.innerText = p.intro;
+            descEl.innerText = p.description;
+
+            (p.images || []).forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = p.title;
+                gallery.appendChild(img);
+            });
+        })();
+    </script>
+</body>
+
+</html>

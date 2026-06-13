@@ -188,12 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = item.querySelector('.image-wrapper img');
         const title = item.querySelector('.item-info h3').innerText;
         const description = item.querySelector('.item-info p').innerText;
+        const id = item.getAttribute('data-id');
 
-        overlay.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightboxCaption.innerHTML = '<strong>' + title + '</strong><br>' + description;
-            lightbox.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+        overlay.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectId = id || title.toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/(^-|-$)/g, '');
+            window.location.href = 'project.html?id=' + encodeURIComponent(projectId);
         });
     });
 
